@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Studio | FlashWeb</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Hero */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+  }
+
+  .hero::after {
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.6);
+  }
+
+  .hero h1, .hero p, .hero .btn-primary {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .hero .btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    background: #22d3ee;
+    color: #111;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .hero .btn-primary:hover {
+    background: #0ea5e9;
+    color: white;
+  }
+
+  /* Sección general */
+  .section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+    color: #22d3ee;
+    margin-bottom: 20px;
+  }
+
+  .section p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+
+  /* Galería */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #22d3ee;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #111;
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #222;
+  }
+
+  @media (max-width: 500px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>📸 Daniel Studio</h1>
+  <p>Portfolio profesional de fotografía creado por <strong>FlashWeb</strong>.  
+     Diseño moderno, galería responsive y animaciones suaves para mostrar cada proyecto con estilo.</p>
+  <a href="#galeria" class="btn-primary">Ver galería</a>
+</header>
+
+<section class="section" id="galeria">
+  <h2>Mis trabajos destacados</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://www.oldskull.net/wp-content/uploads/2014/06/portraits-illustration-oldskull-12.jpg" alt="Retrato creativo">
+      <h3>Retrato creativo</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Paisaje urbano">
+      <h3>Paisaje urbano</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="https://mott.pe/noticias/wp-content/uploads/2019/02/geniales-consejos-de-como-fotografiar-la-naturaleza-1024x594.png" alt="Fotografía de naturaleza">
+      <h3>Fotografía de naturaleza</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Studio_portrait.jpg/800px-Studio_portrait.jpg" alt="Sesión de estudio">
+      <h3>Sesión de estudio</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Daniel Studio | Diseñado por FlashWeb</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aurora | FlashWeb</title>
+  <style>
+    /* Reset simple */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fdf6f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .hero .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff6f61;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero .btn-primary:hover {
+      background: #ff4a3c;
+    }
+
+    /* Section general */
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Menu */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .menu-item {
+      background-color: #fff4f0;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+      color: #ff6f61;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .menu-item p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* Formulario de reserva */
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    form button {
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff6f61;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ff4a3c;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #ffe6df;
+      text-align: center;
+      border-top: 1px solid #ffb3a0;
+      border-radius: 40px 40px 0 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>☕ Café Aurora</h1>
+    <p>El aroma del café artesanal, ahora también online</p>
+    <a href="#reserva" class="btn-primary">Reservar mesa</a>
+  </header>
+
+  <section class="section">
+    <h2>Nuestra historia</h2>
+    <p>Café Aurora nació en 2021 con la idea de recuperar el sabor del café auténtico. Creamos este sitio con un diseño cálido y moderno para que los clientes puedan conocer nuestro menú y reservar directamente desde su móvil.</p>
+  </section>
+
+  <section class="section">
+    <h2>Menú destacado</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Café Latte">
+        <h3>Café Latte</h3>
+        <p>Espuma suave y el equilibrio perfecto entre leche y espresso.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Espresso">
+        <h3>Espresso Clásico</h3>
+        <p>Intenso, aromático y con la mejor selección de granos latinoamericanos.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>La mezcla ideal entre fuerza y cremosidad, coronado con arte latte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reserva">
+    <h2>Reserva tu mesa</h2>
+    <p>Rellena el formulario y reserva tu mesa de forma rápida y sencilla.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <input type="text" name="fecha" placeholder="Fecha de la reserva" required>
+      <textarea name="mensaje" placeholder="Detalles (número de personas, hora...)" rows="4"></textarea>
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Café Aurora | Diseñado por FlashWeb</p>
+  </footer>
+
+</body>
+</html>
