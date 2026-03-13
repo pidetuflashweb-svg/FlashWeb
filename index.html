@@ -218,7 +218,7 @@
        PORTFOLIO
     ══════════════════════════════════════ */
     .portfolio { position:relative; z-index:1; padding:var(--sec) var(--px); }
-    .portfolio-grid { display:grid; grid-template-columns:1.3fr 1fr; gap:1.5px; background:rgba(255,255,255,.04); margin-top:clamp(2rem,4vw,4rem); }
+    .portfolio-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:1.5px; background:rgba(255,255,255,.04); margin-top:clamp(2rem,4vw,4rem); }
     .portfolio-card { background:var(--bg); padding:clamp(1.5rem,3vw,3rem); position:relative; overflow:hidden; }
     .portfolio-card:hover .portfolio-arrow { transform:translate(4px,-4px); }
     .portfolio-tag { font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--electric); margin-bottom:.8rem; display:flex; align-items:center; gap:.5rem; }
@@ -306,7 +306,7 @@
       .process-steps         { grid-template-columns:repeat(2,1fr); gap:2rem; }
       .process-steps::before { display:none; }
 
-      .portfolio-grid  { grid-template-columns:1fr; }
+      .portfolio-grid  { grid-template-columns:1fr 1fr; }
       .contact-section { grid-template-columns:1fr; }
     }
 
@@ -316,6 +316,7 @@
     @media (max-width: 580px) {
       .services-grid { grid-template-columns:1fr; }
       .process-steps { grid-template-columns:1fr; gap:1.5rem; }
+      .portfolio-grid { grid-template-columns:1fr; }
       .hero-actions  { flex-direction:column; }
       .btn-primary, .btn-ghost { text-align:center; width:100%; }
       .form-row      { grid-template-columns:1fr; }
@@ -445,10 +446,14 @@
         <div class="portfolio-visual"><div class="mini-mockup"><div class="mm-bar"><div class="mm-dot" style="background:#ff5f56"></div><div class="mm-dot" style="background:#ffbd2e"></div><div class="mm-dot" style="background:#27c93f"></div></div><div class="mm-body"><div class="mm-hero" style="background:linear-gradient(135deg,#0a0a0a,#1a1a1a);"><span class="mm-title" style="color:rgba(255,255,255,.7);">📷 LENS & LIGHT</span></div></div></div></div>
         <a href="fotografo.html" target="_blank" class="portfolio-link">Ver ejemplo <span class="portfolio-arrow">↗</span></a>
       </div>
+      <div class="portfolio-card">
+        <p class="portfolio-tag">Inmobiliaria</p><h3>Lux Group Marbella</h3>
+        <p>Gestión integral de propiedades turísticas en Marbella. Web de lujo y profesional</p>
+        <div class="portfolio-visual"><div class="mini-mockup"><div class="mm-bar"><div class="mm-dot" style="background:#ff5f56"></div><div class="mm-dot" style="background:#ffbd2e"></div><div class="mm-dot" style="background:#27c93f"></div></div><div class="mm-body"><div class="mm-hero" style="background:linear-gradient(135deg,#0a0800,#1a1200,#2a1a00);"><span class="mm-title" style="color:#c9a84c;">✦ LUX GROUP MARBELLA</span></div></div></div></div>
+        <a href="https://luxgroupmarbella.com" target="_blank" class="portfolio-link">Ver web real <span class="portfolio-arrow">↗</span></a>
+      </div>
     </div>
   </section>
-
-  <!-- ABOUT -->
   <section class="about" id="sobre-mi">
     <div class="about-inner reveal">
       <p class="section-tag">Sobre mí</p>
